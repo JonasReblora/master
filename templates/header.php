@@ -9,11 +9,14 @@
 <body>
     <header>
         <nav class="menu">
-            <a href="index.php">Home</a>
-            <a href="skills.php">Skills</a>
-            <a href="projects.php">Projects</a>
-            <a href="about.php">About</a>
-            <a href="contact.php">Contact</a>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="skills.php">Skills</a></li>
+                <li><a href="projects.php">Projects</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
         </nav>
     </header>
+    <main>
     

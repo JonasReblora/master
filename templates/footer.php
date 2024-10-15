@@ -1,5 +1,6 @@
+    </main>
     <footer>
-        <p>&copy; My first ever built website.</p>
+        <p>&copy; 2024 My Portfolio</p>
     </footer>
 </body>
 </html>
