@@ -20,3 +20,17 @@ header {
     display: inline;
     margin-right: 15px;
 }
+
+main{
+    padding: 20px;
+}
+
+footer{
+    background-color: Grey;
+    color: White;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
