@@ -9,4 +9,4 @@ app.register_blueprint(projects_bp, url_prefix='/projects')
 app.register_blueprint(contact_bp, url_prefix='/contact')
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

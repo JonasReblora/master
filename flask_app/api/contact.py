@@ -4,10 +4,10 @@ contact_bp = Blueprint('contact', __name__, url_prefix='/contact')
 
 @contact_bp.route('/', methods=["POST"])
 def contact():
-    data = request.get_json()
-    name = data.get('name')
-    email = data.get('email')
-    msg = data.get('msg')
+    data = request.form.get_json()
+    name = request.form.get('name')
+    email = request.form.get('email')
+    msg = request.form.get('msg')
 
     return jsonify({
         "status": "success",
