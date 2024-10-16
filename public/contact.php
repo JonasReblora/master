@@ -1,27 +1,36 @@
 <?php include "../templates/header.php"; ?>
-<?php require "contact.form.php"; ?>
     
-    <h2>Contact me</h2>
-    <form id="contactForm">
-        <label for="name">Name: </label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">Email: </label><br>
-        <input type="text" id="email" name="email" required><br><br>
-        <label for="msg">Message: </label><br>
-        <textarea name="msg" id="msg" required></textarea><br><br>
-        <button type="submit">Send</button>
-    </form>
+<h2>Contact me</h2>
+<form id="contactForm">
+    <label for="name">Name: </label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email: </label><br>
+    <input type="text" id="email" name="email" required><br><br>
+    <label for="msg">Message: </label><br>
+    <textarea name="msg" id="msg" required></textarea><br><br>
+    <button type="submit">Send</button>
+</form>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+<script> // AJAX - Updates
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); //Prevents form for sending default
 
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                msg: document.getElementById('msg').value
-            };
-        });
-    </script>
+    const formData = new formData(); {
+    formData.append('name', document.getElementById('name').value);
+    formData.append('email', document.getElementById('email').value);
+    formData.append('msg', document.getElementById('msg').value);
+
+    fetch('contact.form.php', {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text()) // Get the response from PHP
+    .then(data => {
+        document.body.innerHTML = data; // then replace the current content with response
+    })
+    .catch(error => console.error('Error', error));
+    };
+});
+</script>
 
 <?php include "../templates/footer.php"; ?>
