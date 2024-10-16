@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
 
-contact_bp = Blueprint('contact', __name__)
+contact_bp = Blueprint('contact', __name__, url_prefix='/contact')
 
-@contact_bp.route('/contact', methods=["POST"])
+@contact_bp.route('/', methods=["POST"])
 def contact():
     data = request.get_json()
     name = data.get('name')
