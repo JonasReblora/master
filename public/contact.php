@@ -15,7 +15,7 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); //Prevents form for sending default
 
-    const formData = new formData(); {
+    const formData = new formData();
     formData.append('name', document.getElementById('name').value);
     formData.append('email', document.getElementById('email').value);
     formData.append('msg', document.getElementById('msg').value);
@@ -29,7 +29,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         document.body.innerHTML = data; // then replace the current content with response
     })
     .catch(error => console.error('Error', error));
-    };
 });
 </script>
 
