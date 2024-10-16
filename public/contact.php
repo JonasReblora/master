@@ -1,4 +1,5 @@
 <?php include "../templates/header.php"; ?>
+<?php require "contact.form.php"; ?>
     
     <h2>Contact me</h2>
     <form id="contactForm">
@@ -12,15 +13,15 @@
     </form>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event)) {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const formData = {
-                name:document.getElementById('name').value,
-                email:document.getElementById('email').value,
-                msg:document.getElementById('msg').value
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                msg: document.getElementById('msg').value
             };
-        };
+        });
     </script>
 
 <?php include "../templates/footer.php"; ?>

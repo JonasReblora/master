@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS #Updates
 
 app = Flask(__name__)
+CORS(app) #Enables CORS in all route
 
 # Routes for testing
-@app.route('../api/projects.py', methods=['GET'])
+@app.route('/api/projects.py', methods=['GET'])
 def get_project():
     projects = [
         {"name": "Project 1", "Portfolio": "My first project"}
@@ -11,7 +13,7 @@ def get_project():
     return jsonify(projects)
 
 # API endpoint for contact form
-@app.route('../api/contact.py', methods=['POST'])
+@app.route('/api/contact.py', methods=['POST'])
 def contact():
     data = request.get_json()
     name = data.get('name')
