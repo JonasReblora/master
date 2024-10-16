@@ -1,5 +1,4 @@
 <?php include "../templates/header.php"; ?>
-<?php include "contact.form.php"; ?>
     
     <h2>Contact me</h2>
     <form id="contactForm">
