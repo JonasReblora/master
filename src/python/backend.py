@@ -5,7 +5,7 @@ app = Flask(__name__)
 CORS(app) #Enables CORS in all route
 
 # Routes for testing
-@app.route('/api/projects.py', methods=['GET'])
+@app.route('/api/projects.py', methods=["GET"])
 def get_project():
     projects = [
         {"name": "Project 1", "Portfolio": "My first project"}
