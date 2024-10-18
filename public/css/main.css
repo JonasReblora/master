@@ -30,6 +30,15 @@ header {
     border: 2px solid white;
 }
 
+.profile-pic2 {
+    width: 350px;
+    height: 455px;
+    border-radius: 10px;
+    display: block;
+    margin: 50px auto;
+    
+}
+
 
 .menu ul{
     list-style: none;
@@ -73,9 +82,17 @@ main{
 
 .about-container {
     display: flex;
+    width: 85%;
     align-items: center;
     justify-content: center;
     margin: 50px;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 200px;
+    background-color: rgb(42, 42, 42);
+    border-radius: 10px;
 }
 
 .social-link {
@@ -91,13 +108,6 @@ main{
     width: 200px;
     height: px;
     transition: transform 0.3s;
-}
-
-.about-text {
-    flex: 1;
-    padding-right:px;
-    background-color: rgb(42, 42, 42);
-    border-radius: 10px;
 }
 
 form button {

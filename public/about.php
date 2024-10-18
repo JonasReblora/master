@@ -28,7 +28,7 @@
                 <li>Sleeping</li>
             </ul>
         </div>
-        <img src="/imgs/profile.png" alt="profile-pic" class="profile-pic">
+        <img src="/imgs/profile.png" alt="profile-pic" class="profile-pic2">
     </div>
 
 <?php include "../templates/footer.php"; ?>
