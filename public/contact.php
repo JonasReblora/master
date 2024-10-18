@@ -20,11 +20,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     formData.append('email', document.getElementById('email').value);
     formData.append('msg', document.getElementById('msg').value);
 
-    fetch('contact.form.php', { 
+    fetch('/contact/', { 
         method: "POST",
-        body: formData
+        body: JSON.stringify({
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            msg: document.getElementById('msg').value
+        }),
+        headers: {
+            'Content-Type': 'Application/json' // Specify content
+        }
     })
-    .then(Response => Response.text()) // Get the response from PHP
+    .then(response => response.json()) // Get the response from PHP
     .then(data => {
         document.body.innerHTML = data; // then replace the current content with response
     })

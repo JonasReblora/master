@@ -4,11 +4,12 @@ contact_bp = Blueprint('contact', __name__)
 
 @contact_bp.route('/', methods=["POST"])
 def contact():
-    name = request.form.get('name')
-    email = request.form.get('email')
-    msg = request.form.get('msg')
+    data = request.json
+    name = data.get('name')
+    email = data.get('email')
+    msg = data.get('msg')
 
-    if not name or not email or not msg:
+    if not all([name, email, msg]):
         return jsonify({"status": "error", "message": "Missing form data"}), 400
 
     return jsonify({
