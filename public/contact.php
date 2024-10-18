@@ -20,11 +20,11 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     formData.append('email', document.getElementById('email').value);
     formData.append('msg', document.getElementById('msg').value);
 
-    fetch('contact.form.php', {
+    fetch('contact.form.php', { 
         method: "POST",
         body: formData
     })
-    .then(response => response.text()) // Get the response from PHP
+    .then(Response => Response.text()) // Get the response from PHP
     .then(data => {
         document.body.innerHTML = data; // then replace the current content with response
     })
