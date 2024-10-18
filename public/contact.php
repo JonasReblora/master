@@ -15,8 +15,11 @@
         </a>
         
     </div>
+    <h3>Email:</h3>
+    <p>jonas.reblora.01@gmail.com</p>
 </div>
 
+<br><br><br>
 
 <h2>for more details</h2>
 <form id="contactForm">

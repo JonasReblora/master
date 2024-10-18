@@ -39,7 +39,7 @@ nav ul li a {
 
 .profile-pic {
     width: 350px;
-    height: 350px;
+    height: 315px;
     border-radius: 100%;
     display: block;
     margin: 50px auto;
@@ -130,7 +130,7 @@ main{
 
 .social-link {
     display: flex;
-    height: 200px;
+    height: 100px;
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 0;
