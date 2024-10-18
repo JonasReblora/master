@@ -1,6 +1,6 @@
 <?php include '../templates/header.php'; ?>
 
-<h2>Contact me</h2>
+<h2>for more details</h2>
 <form id="contactForm">
     <label for="name">Name: </label><br>
     <input type="text" id="name" name="name" required><br>
