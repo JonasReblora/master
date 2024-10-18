@@ -1,4 +1,15 @@
 <?php include '../templates/header.php'; ?>
+<div class="contactMe">
+    <h2>Contact Me</h2>
+    <p>You can find me on this platforms:</p>
+
+    <div class="social-link">
+        <a href="https://Github.com/JonasReblora" target="_blank" class="social-icon">
+            <img src="/imgs/Git.png" alt="Github">
+        </a>
+   
+    </div>
+</div>
 
 <h2>for more details</h2>
 <form id="contactForm">
