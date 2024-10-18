@@ -1,5 +1,5 @@
-<?php include "../templates/header.php"; ?>
-    
+<?php include '../templates/header.php'; ?>
+
 <h2>Contact me</h2>
 <form id="contactForm">
     <label for="name">Name: </label><br>
@@ -15,12 +15,9 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); //Prevents form for sending default
 
-    const formData = new formData();
-    formData.append('name', document.getElementById('name').value);
-    formData.append('email', document.getElementById('email').value);
-    formData.append('msg', document.getElementById('msg').value);
+    console.log("Form submitted");
 
-    fetch('/contact/', { 
+    fetch('/api/contact/', { 
         method: "POST",
         body: JSON.stringify({
             name: document.getElementById('name').value,
@@ -28,15 +25,21 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             msg: document.getElementById('msg').value
         }),
         headers: {
-            'Content-Type': 'Application/json' // Specify content
+            'Content-Type': 'application/json' // Specify content
         }
     })
-    .then(response => response.json()) // Get the response from PHP
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        return response.json();
+    })
     .then(data => {
         document.body.innerHTML = `<h1>${data.message}</h1>`; // Show if success
     })
     .catch(error => console.error('Error', error));
 });
 </script>
+<script src="../js/contact.js"></script>
 
-<?php include "../templates/footer.php"; ?>
+<?php include '../templates/footer.php'; ?>

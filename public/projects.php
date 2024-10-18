@@ -1,8 +1,11 @@
 <?php include "../templates/header.php"; ?>
 
-    <h2>My project</h2>
-    <ul>
-        <li>Project 1: My Portfolio</li>
+    <h1>projects</h1>
+    <ul class="project-list">
+        <li>
+            <h2>My portfolio</h2>
+            <p>This is my first project</p>
+        </li>
     </ul>
     
 <?php include "../templates/footer.php"; ?>

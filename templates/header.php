@@ -19,4 +19,3 @@
         </nav>
     </header>
     <main>
-    <?php include "contact.form.php"; ?>
