@@ -33,7 +33,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     })
     .then(response => response.json()) // Get the response from PHP
     .then(data => {
-        document.body.innerHTML = data; // then replace the current content with response
+        document.body.innerHTML = `<h1>${data.message}</h1>`; // Show if success
     })
     .catch(error => console.error('Error', error));
 });
